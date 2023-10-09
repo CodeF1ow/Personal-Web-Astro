@@ -20,8 +20,8 @@ import { Icon} from "astro-iconify"
 <style lang="stylus">
     #inicio
       display grid
-      color mediumspringgreen
-      background rgb(10, 15, 20) linear-gradient(135deg, rgb(30, 50, 60), rgb(10, 20, 30), rgb(10, 15, 20), rgb(20, 20, 10), rgb(30, 30, 15))
+      color darkred
+      background rgb(255, 102, 0) linear-gradient(135deg, rgb(51, 51, 51), rgb(38, 38, 38), rgb(26, 26, 26), rgb(13, 13, 13), rgb(0, 0, 0))
       background-size 400% 400%
       min-height 100vh
       border-bottom thin solid
@@ -40,14 +40,14 @@ import { Icon} from "astro-iconify"
       animation 1.75s ease home
       @keyframes home
         from, 50%
-          background seagreen
+          background darkred
           opacity 0
           border-radius 4em
           pointer-events none
       mark
         position relative
         white-space nowrap
-        color aquamarine
+        color darkred
         background inherit
         font-style italic
         &::after
@@ -59,7 +59,7 @@ import { Icon} from "astro-iconify"
           transform scaleX(0)
           transform-origin center
           height 2px
-          background mediumturquoise
+          background whitesmoke
           border-radius 2px
           transition transform .15s
         &:hover::after
@@ -72,17 +72,17 @@ import { Icon} from "astro-iconify"
       position relative
       white-space nowrap
       font-style italic
-      color aquamarine
+      color darkred
       text-shadow 0 0 3px
-      text-decoration underline double paleturquoise
+      text-decoration underline double whitesmoke
       text-decoration-thickness 2px
       text-underline-offset 4px
       &::after
-        content "SSbit01"
+        content "Kiri86"
         position absolute
         inset 0
         color black
-        background mediumaquamarine
+        background darkred
         font-weight normal
         transform scaleX(0)
         transform-origin right
@@ -95,11 +95,11 @@ import { Icon} from "astro-iconify"
       &:active
         user-select none
         &::after
-          background aquamarine
-          box-shadow 0 0 12px mediumaquamarine
+          background darkred
+          box-shadow 0 0 12px darkred
     
     #headline
-      color lightseagreen
+      color navajowhite
       line-height 1.25
       &::after
         content ""
@@ -107,8 +107,8 @@ import { Icon} from "astro-iconify"
         vertical-align sub
         width .2em
         height 1em
-        background lightcyan
-        box-shadow 0 0 6px lightcyan
+        background whitesmoke
+        box-shadow 0 0 6px whitesmoke
         border-radius 2px
         margin 0 .35em
         animation 1s infinite step-end caret
@@ -119,7 +119,7 @@ import { Icon} from "astro-iconify"
     #scroll-down
       display inline-block
       width clamp(3em, 9vmin, 4em)
-      color cadetblue
+      color navajowhite
       filter drop-shadow(0 0 3px darkslateblue)
       margin-top .5em
       animation 1s infinite bounce
@@ -129,10 +129,10 @@ import { Icon} from "astro-iconify"
         50%
           transform translateY(20%)
       &:hover
-        color mediumaquamarine
+        color darkred
         filter drop-shadow(0 0 3px teal)
       &:active
-        color aquamarine
+        color darkred
         filter drop-shadow(0 0 4px lightseagreen)
         scale .9
     </style>
