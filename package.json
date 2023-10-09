@@ -1,0 +1,22 @@
+{
+  "name": "personal-web-astro",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@fontsource/jura": "5.0.15",
+    "astro": "3.2.3",
+    "astro-compress": "2.0.15",
+    "astro-iconify": "1.2.0"
+  },
+  "devDependencies": {
+    "schema-dts": "1.1.2",
+    "stylus": "0.60.0"
+  }
+}

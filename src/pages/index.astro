@@ -1,0 +1,116 @@
+---
+import "@fontsource/jura";
+import * as sameAs from "@/data/sameAs";
+import NavBar from "@/components/NavBar.astro";
+import Inicio from "@/layouts/Inicio.astro";
+import SobreMi from "@/layouts/SobreMi.astro";
+import Proyectos from "@/layouts/Proyectos.astro";
+import Contacto from "@/layouts/Contacto.astro";
+import PiePagina from "@/layouts/PiePagina.astro";
+
+import type { Person, WithContext } from "schema-dts";
+
+const metaData = {
+  title: "Portfolio",
+  summary:
+    "Un desarrollador auto-didacta, apasionado por la tecnología y el aprendizaje continuo.",
+  get description() {
+    return `Bienvenido a mi portfolio, ${this.summary.toLowerCase()}`;
+  },
+};
+
+const {
+  email: { title: email },
+  resume,
+  ...profiles
+} = sameAs;
+
+const jsonLd: WithContext<Person> = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Oscar",
+  alternateName: "Kiri86",
+  description: metaData.summary,
+  email,
+  image: "https://avatars.githubusercontent.com/u/59541034",
+  sameAs: Object.values(profiles).map(({ href }) => href),
+};
+---
+
+<html lang="es">
+  <head prefix="og: https://ogp.me/ns# profile: https://ogp.me/ns/profile#">
+    <!-- Metaetiquetas primarias -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark light" />
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <title>{metaData.title}</title>
+    <meta name="description" content={metaData.description} />
+    {Astro.site && <link rel="canonical" href={Astro.site} />}
+
+    <!-- Metaetiquetas Open Graph -->
+    <meta property="og:title" content={metaData.title} />
+    <meta property="og:description" content={metaData.summary} />
+    <meta property="og:type" content="profile" />
+    <meta property="profile:first_name" content="Oscar" />
+    <meta property="profile:last_name" content="Muñoz" />
+    <meta property="profile:username" content="Kiri86" />
+    <meta property="profile:gender" content="Hombre" />
+    {
+      Astro.site && (
+        <>
+          <meta property="og:url" content={Astro.site} />
+          <meta
+            property="og:image"
+            content={`${Astro.site}images/Frontal2.png`}
+          />
+        </>
+      )
+    }
+
+    <!-- Metaetiquetas Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={metaData.title} />
+    <meta name="twitter:description" content={metaData.description} />
+    {
+      Astro.site && (
+        <meta
+          name="twitter:image"
+          content={`${Astro.site}images/Frontal1.png`}
+        />
+      )
+    }
+
+    <!-- Otras Metaetiquetas -->
+    <meta name="generator" content="Astro.generator" />
+  </head>
+
+  <body>
+    <main>
+      <Inicio />
+      <SobreMi />
+      <Proyectos />
+      <Contacto />
+    </main>
+
+    <NavBar />
+    <PiePagina />
+  </body>
+</html>
+
+<script type="application/ld+json" set:html="{JSON.stringify(jsonLd)}" />
+
+<style lang="stylus" is:global>
+	html
+		scrollbar-width: thin
+		scroll-behavior: smooth
+
+	body
+		color white
+		background black
+		font-family Jura, Calibri, Avenir, Helvetica, Arial, sans-serif
+		margin 0
+</style>
