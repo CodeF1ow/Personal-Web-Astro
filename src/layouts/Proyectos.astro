@@ -1,0 +1,113 @@
+---
+import { Icon } from "astro-iconify"
+import { github, replit, freecododecamp } from "@/data/sameAs"
+import Project from "@/components/Proyecto.astro"
+---
+
+<section id="proyectos">
+  <h1 class="seccion-encabezado">Estos son algunos de mis mejores proyectos personales.<Icon name="ph:smiley-wink-fill" /></h1>
+
+  <ul class="lista-proyectos">
+    <li>
+      <Project name="KC Admin" tags={["JavaScript", "HTML", "Lua"]} source="https://github.com/K1ri86/kc_adminV2">
+        <p>KC Admin es un menu de administracion para FiveM utilizando el framework de ESX en su ultima version un menu simple pero a la vez con muchas funciones para poder ejecutar en tu servidor.</p>
+      </Project>
+    </li>
+    <li>
+      <Project name="Portfolio Astro" tags={["TypeScript", "Astro", "Tailwind CSS", "daisyUI"]} source="https://github.com/K1ri86/Nuevo-Portfolio">
+        <p>Un portfolio diferente destinado a brindar una experiencia interesante      a los usuarios.</p>
+      </Project>
+    </li>
+    <li>
+      <Project name="Discord Bot" tags={["JavaScript", "Discord.JS"]} source="https://github.com/K1ri86/Arctic-Multipurpose-Bot">
+        <p>Bot Multifuncional para Discord.</p>
+      </Project>
+    </li>
+  </ul>
+
+  <div id="contenedor-perfiles">
+    <h2>Ver más en mis <mark>perfiles</mark></h2>
+    <ul id="perfiles">
+      {[github, replit, freecododecamp].map(({ href, title, icon }) => (
+         <li><a href={href} target="_blank" rel="noreferrer noopener" title={title}><Icon name={icon} /></a></li>
+      ))}
+    </ul>
+  </div>
+</section>
+
+
+
+<style lang="stylus">
+#proyectos
+  background rgb(0, 0, 0)
+  padding-top 2.75em
+  padding-bottom 5em
+  border-bottom thin solid greenyellow
+
+.seccion-encabezado
+  color greenyellow
+  text-align center
+  font-size clamp(1.5em, 6.4vw, 2em)
+  line-height 1.5
+  gap .3em
+  $mx = .75em
+  margin 0 $mx 1.25em $mx
+  > svg
+    display inline-block
+    vertical-align sub
+    width 1.25em
+    color greenyellow
+    margin 0 .3em
+
+.lista-proyectos
+  list-style none
+  display flex
+  flex-wrap wrap
+  align-items center
+  justify-content center
+  max-width 96em
+  padding 0
+  margin auto
+
+#contenedor-perfiles
+  text-align center
+  $mx = 1em
+  margin 2.5em $mx 0 $mx
+  > h2:first-child
+    font-size clamp(1.5em, 7vw, 2em)
+    > mark
+      color greenyellow
+      background none
+
+#perfiles
+  list-style none
+  display flex
+  flex-wrap wrap
+  align-items center
+  justify-content center
+  background rgba(0, 0, 0, .3)
+  max-width max-content
+  padding-left 0
+  border-radius 16px
+  box-shadow 0 0 4px greenyellow
+  margin auto
+  overflow hidden  // Para que no se vea el borde de la sombra
+  > li
+    > a:first-child
+      display inline-block
+      color greenyellow
+      padding .5em
+      transition .15s
+      &:hover
+        color greenyellow
+        > svg
+          transform translateY(-5%)
+          filter drop-shadow(0 0 2px teal)
+      &:active
+        color greenyellow
+        > svg
+          filter drop-shadow(0 0 4px teal)
+      > svg
+        width clamp(2.5em, 12vw, 3em)
+        transition transform .2s, filter .2s
+</style>

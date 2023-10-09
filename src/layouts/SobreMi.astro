@@ -1,0 +1,350 @@
+---
+import { Icon } from "astro-iconify"
+import Skill from "@/components/Skill.astro"
+import { resume } from "@/data/sameAs"
+---
+
+<section id="sobre">
+  <div id="sobre-contenido">
+    <figure id="avatar">
+      <img
+        src="https://avatars.githubusercontent.com/u/47194884?v=4"
+        alt="Avatar"
+        loading="lazy"
+      />
+    </figure>
+
+    <div id="sobre-mi">
+      <h1 class="seccion-titulo"><a href="#sobre-mi">Acerca de mí</a></h1>
+      <p>
+        Soy <strong>Oscar</strong>, también conocido como <em
+          ><strong>Kiri86</strong></em
+        >, un apasionado y joven <strong>desarrollador autodidacta</strong> que
+        disfruta <strong>explorando</strong> y <strong>probando</strong> las <strong
+          >últimas tecnologías</strong
+        >.
+      </p>
+      <p>
+        Soy capaz de desarrollar <strong>paginas web</strong> realizar <strong
+          >análisis de datos</strong
+        > y <strong>visualización</strong> utilizando <em>Python</em> y <em
+          >JavaScript</em
+        > (o <em>TypeScript</em>).
+      </p>
+      <p>
+        Mi curiosidad por la <strong>ciencia</strong> y la <strong
+          >tecnología</strong
+        > me llevó a aprender <em>JavaScript</em> como mi primer lenguaje de
+        programación a la edad de 23 años. Poco después, me interesé en la <strong
+          >Por otras tecnologias</strong
+        >, la <strong>Inteligencia Artificial</strong>, las cuales sigo
+        aprendiendo.
+      </p>
+      <p>
+        También tengo un gran interés en el <strong>Desarrollo Web</strong> y
+        las <strong>Comunicaciones</strong>; he dominado las tecnologías <em
+          >front-end</em
+        > y <em>back-end</em> que me permitieron crear <u
+          >proyectos emocionantes</u
+        >.
+      </p>
+    </div>
+  </div>
+  <fieldset id="intereses">
+    <legend>Intereses</legend>
+    <ul>
+      {
+        [
+          { icon: "mdi:code-braces", text: "Tecnologias" },
+          { icon: "mdi:robot-angry", text: "Discord Bots" },
+          { icon: "simple-icons:windows95", text: "Linux" },
+          {
+            icon: "solar:gamepad-minimalistic-bold-duotone",
+            text: "Videojuegos y Modding",
+          },
+        ].map(({ icon, text }) => (
+          <li>
+            <Icon name={icon} />
+            {text}
+          </li>
+        ))
+      }
+    </ul>
+  </fieldset>
+  <a href={resume.href} target="_blank" id="enlace-curriculum"><Icon name={resume.icon} />{resume.title}<Icon name="iconamoon:link-external-duotone" /></a>
+
+  <div id="habilidades">
+    <h1 class="seccion-titulo"><a href="#habilidades"><Icon name="carbon:skill-level-advanced" />Mis habilidades para programar</a></h1>
+    <fieldset id="front-end">
+      <legend><a href="#front-end"><Icon name="eva:browser-fill" />Front-End</a></legend>
+      <fieldset>
+        <legend>Diseño</legend>
+        <Skill icon="vscode-icons:file-type-css">CSS</Skill>
+        <Skill icon="stylus">Stylus</Skill>
+        <Skill icon="logos:tailwindcss-icon">Tailwind CSS</Skill>
+      </fieldset>
+      <fieldset>
+        <legend>Programacion</legend>
+        <Skill icon="skill-icons:javascript">JavaScript</Skill>
+        <Skill icon="skill-icons:typescript">TypeScript</Skill>
+        <fieldset>
+          <legend>Frameworks / Librerias</legend>
+          <Skill icon="logos:react">React</Skill>
+          <Skill icon="logos:vue">Vue</Skill>
+        </fieldset>
+      </fieldset>
+    </fieldset>
+
+    <fieldset id="back-end">
+      <legend><a href="#back-end"><Icon name="clarity:rack-server-solid" />Back-End</a></legend>
+      <Skill icon="logos:nodejs-icon-alt">Node.js</Skill>
+      <Skill icon="simple-icons:express">Express</Skill>
+      <fieldset>
+        <legend><Icon name="ph:database-duotone" />Base de datos</legend>
+        <Skill icon="devicon:mongodb">MongoDB</Skill>
+        <Skill icon="logos:postgresql">PostgreSQL</Skill>
+      </fieldset>
+    </fieldset>
+
+    <fieldset id="todo-en-uno">
+      <legend><a href="#todo-en-uno">Frameworks todo en uno</a></legend>
+      <Skill icon="logos:nextjs-icon">Next.js</Skill>
+      <Skill icon="skill-icons:astro">Astro</Skill>
+    </fieldset>
+
+  </div>
+</section>
+
+
+<style lang="stylus">
+  .seccion-titulo
+    font-size clamp(1.4em, 8vw, 2em)
+    > a:first-child
+      position relative
+      color greenyellow
+      text-decoration none
+      transition color .15s
+      &::before
+        content ""
+        position absolute
+        right 0
+        bottom -4px
+        left 0
+        transform scaleX(0)
+        transform-origin right
+        height 2px
+        background mediumturquoise
+        border-radius 2px
+        transition transform .25s
+      &::after
+        content "#"
+        position absolute
+        right -1em
+        color darkslategray
+        opacity 0
+        transition opacity .15s
+      &:hover, &:focus
+        color greenyellow
+        &::after
+          opacity 1
+      &:active::before
+        transform scaleX(1)
+        transform-origin left
+  
+  #sobre
+    background rgb(38, 38, 38) linear-gradient(135deg, rgb(51, 51, 51), rgb(38, 38, 38))
+    $px = 1em
+    padding 0 $px 5em $px
+    border-bottom thin solid greenyellow
+  
+  #sobre-contenido
+    display flex
+    flex-wrap wrap
+    align-items center
+    justify-content center
+    gap 1.5em 2em
+    padding-top 2em
+  
+  #avatar
+    margin 0
+    > img:first-of-type
+      width 18em
+      max-width 100%
+      border-radius 50%
+      box-shadow 0 0 8px teal
+      transition box-shadow .2s, translate .15s
+      &:hover
+        box-shadow 0 0 12px 2px greenyellow
+      &:active
+        translate 0 -.5em
+    > figcaption:last-of-type
+      text-align center
+      color gainsboro
+      font-size .75em
+      margin-top 1em
+  
+  #sobre-mi
+    max-width 55em
+    scroll-margin-top 1em
+    > h1:first-child
+      text-align center
+      margin 0
+    > p
+      font-size clamp(1em, 3vw, 1.1em)
+      line-height 1.5
+      strong, em
+        color greenyellow
+      u
+        text-decoration-color greenyellow
+      a
+        color dodgerblue
+        transition color .15s, text-shadow .15s
+        &:hover
+          color deepskyblue
+        &:active
+          text-shadow 0 0 4px
+      &:last-child::after
+        content ""
+        display inline-block
+        vertical-align sub
+        width .2em
+        height 1em
+        background lightcyan
+        box-shadow 0 0 3px lightcyan
+        border-radius 2px
+        margin-left .35em
+        animation 1s infinite step-end caret
+        @keyframes caret
+          50%
+            opacity 0
+  
+  #intereses
+    background rgb(0, 0, 0)
+    max-width 75em
+    padding-top .75em
+    border thin solid greenyellow
+    border-radius 8px
+    box-shadow 1px 1px 4px black
+    margin .5em auto
+    > legend:first-child
+      color greenyellow
+      font-size 1.25em
+    > ul
+      list-style none
+      display flex
+      flex-wrap wrap
+      justify-content space-evenly
+      gap .75em 1em
+      padding 0
+      margin 0
+      > li
+        display flex
+        align-items center
+        gap .4em
+        color greenyellow
+        > svg
+          color greenyellow
+          width 1.5em
+  
+  #enlace-curriculum
+    text-decoration none
+    display flex
+    align-items center
+    gap .5em
+    color greenyellow
+    background rgb(0, 0, 0)
+    font-size 1.25em
+    max-width max-content
+    padding .75em
+    border-radius .5em
+    box-shadow 0 0 4px greenyellow
+    margin 2em auto
+    transition-property color, background, box-shadow, scale
+    transition-duration .15s
+    > svg
+      width 1.25em
+      &:last-of-type
+        margin-left .25em
+    &:hover
+      color black
+      background greenyellow
+    &:active
+      color black
+      background greenyellow
+      scale .95
+  
+  #habilidades
+    display grid
+    justify-content center
+    gap 2em
+    margin-top 2em
+    > h1:first-child
+      text-align center
+      margin-bottom -.25em
+      > a
+        display inline-flex
+        align-items center
+        gap .25em
+        > svg:first-child
+          width 1em
+    fieldset
+      display flex
+      flex-wrap wrap
+      align-items center
+      justify-content space-evenly
+      gap 1em
+      border-radius 8px
+      box-shadow 1px 1px 4px black
+      fieldset
+        background rgb(30, 40, 40)
+        padding .75em
+        border thin solid rgb(30, 40, 40)
+        margin .25em 0
+        > legend
+          display flex
+          align-items center
+          gap .25em
+          color greenyellow
+          svg
+            width 1.5em
+    > fieldset  
+      background rgb(0, 0, 0)
+      padding 1em .75em
+      border thin solid greenyellow
+      margin 0 -.25em
+      scroll-margin-top 1em
+      > legend
+        font-size clamp(1.1em, 5.8vw, 1.5em)
+        > a:first-child  
+          display inline-flex
+          align-items flex-end
+          gap .25em
+          position relative
+          color greenyellow
+          text-decoration none
+          transition color .15s
+          &::before
+            content ""
+            color black
+            position absolute
+            right 0
+            bottom -3px
+            left 0
+            transform scaleX(0)
+            transform-origin right
+            height 2px
+            background greenyellow
+            border-radius 2px
+            transition transform .25s
+          &:hover, &:active
+            color greenyellow
+          &:active::before
+            transform scaleX(1)
+            transform-origin left
+          > svg:first-child
+            width 1.25em
+  
+  @media (max-width 500px)
+    #intereses > ul
+      flex-direction column
+  </style>

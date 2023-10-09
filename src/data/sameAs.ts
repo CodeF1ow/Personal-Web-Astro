@@ -12,25 +12,19 @@ export interface sameAs {
   }
   
   export const replit: sameAs = {
-    href: "https://replit.com/",
+    href: "https://replit.com/@Kiri86",
     title: "Replit",
     icon: "simple-icons:replit"
   }
   
-  export const codepen: sameAs = {
-    href: "https://codepen.io/",
-    title: "CodePen",
-    icon: "teenyicons:codepen-solid"
-  }
-  
   export const freecododecamp: sameAs = {
-    href: "https://www.freecodecamp.org/",
+    href: "https://www.freecodecamp.org/espanol/fcc35a7a1bc-9e34-450f-8b60-788665c5dbd7/",
     title: "freeCodeCamp",
     icon: "simple-icons:freecodecamp"
   }
   
   export const linkedin: sameAs = {
-    href: "https://www.linkedin.com/in/",
+    href: "https://www.linkedin.com/in/kiri86dev/",
     title: "LinkedIn",
     icon: "ri:linkedin-fill"
   }
@@ -44,7 +38,7 @@ export interface sameAs {
   }
   
   export const resume: sameAs = {
-    href: "/resume-fullstackdev-phone-censored.pdf",
-    title: "Résumé",
+    href: "/curriculum.pdf",
+    title: "Curriculum",
     icon: "pepicons-print:cv"
   }

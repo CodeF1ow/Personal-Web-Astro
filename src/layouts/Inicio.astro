@@ -15,12 +15,20 @@ import { Icon} from "astro-iconify"
     >
   </div>
 </section>
-
+<head>
+  <style>
+     
+      }
+  </style>
+</head>
 
 <style lang="stylus">
+   #nombre {
+          color: whitesmoke ;
+   }
     #inicio
       display grid
-      color darkred
+      color greenyellow
       background rgb(255, 102, 0) linear-gradient(135deg, rgb(51, 51, 51), rgb(38, 38, 38), rgb(26, 26, 26), rgb(13, 13, 13), rgb(0, 0, 0))
       background-size 400% 400%
       min-height 100vh
@@ -40,14 +48,14 @@ import { Icon} from "astro-iconify"
       animation 1.75s ease home
       @keyframes home
         from, 50%
-          background darkred
+          background greenyellow
           opacity 0
           border-radius 4em
           pointer-events none
       mark
         position relative
         white-space nowrap
-        color darkred
+        color greenyellow
         background inherit
         font-style italic
         &::after
@@ -68,11 +76,11 @@ import { Icon} from "astro-iconify"
         font-size clamp(2em, 10vmin, 2.5em)
         line-height 1.25
     
-    #me
+    #yo
       position relative
       white-space nowrap
       font-style italic
-      color darkred
+      color greenyellow
       text-shadow 0 0 3px
       text-decoration underline double whitesmoke
       text-decoration-thickness 2px
@@ -82,7 +90,7 @@ import { Icon} from "astro-iconify"
         position absolute
         inset 0
         color black
-        background darkred
+        background greenyellow
         font-weight normal
         transform scaleX(0)
         transform-origin right
@@ -95,11 +103,11 @@ import { Icon} from "astro-iconify"
       &:active
         user-select none
         &::after
-          background darkred
-          box-shadow 0 0 12px darkred
+          background greenyellow
+          box-shadow 0 0 12px greenyellow
     
     #headline
-      color navajowhite
+      color greenyellow
       line-height 1.25
       &::after
         content ""
@@ -119,7 +127,7 @@ import { Icon} from "astro-iconify"
     #scroll-down
       display inline-block
       width clamp(3em, 9vmin, 4em)
-      color navajowhite
+      color greenyellow
       filter drop-shadow(0 0 3px darkslateblue)
       margin-top .5em
       animation 1s infinite bounce
@@ -129,10 +137,10 @@ import { Icon} from "astro-iconify"
         50%
           transform translateY(20%)
       &:hover
-        color darkred
+        color greenyellow
         filter drop-shadow(0 0 3px teal)
       &:active
-        color darkred
+        color greenyellow
         filter drop-shadow(0 0 4px lightseagreen)
         scale .9
     </style>
