@@ -1,0 +1,78 @@
+---
+import "@fontsource/jura";
+---
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="color-scheme" content="dark light" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <title>404 (No Encontrado)</title>
+  </head>
+
+  <body>
+    <hgroup class="grupo-encabezado">
+      <h1>404</h1>
+      <p>Sí, eso es un <strong>error</strong></p>
+    </hgroup>
+
+    <p class="mensaje">
+      Esta no es la página que estás buscando. Parece que has entrado en un agujero y has acabado en la dimensión incorrecta.
+    </p>
+
+    <a class="volver" href="/">¡Volver ahora!</a>
+</body>
+</html>
+
+<style lang="stylus">
+body
+  font-family Jura, Calibri, Arial, sans-serif
+  background rgb(5, 15, 25)
+  text-align center
+  margin 3em 1em
+
+.grupo-encabezado
+  > h1
+    font-size 8em
+    color greenyellow
+    text-shadow 0 0 6px
+    margin 0
+  > p
+    color crimson
+    margin 0
+
+.mensaje
+  max-width 35em
+  font-size 1.5em
+  line-height 1.5
+  margin 1em auto
+
+.volver
+  text-decoration none
+  position relative
+  font-size 1.5em
+  white-space nowrap
+  color cadetblue
+  background inherit
+  transition-property color, text-shadow
+  transition-duration .2s
+  &::after
+    content ""
+    position absolute
+    right 0
+    bottom -2px
+    left 0
+    transform scaleX(0)
+    transform-origin center
+    height 2px
+    background greenyellow
+    border-radius 2px
+    transition transform .2s
+  &:hover::after
+    transform scaleX(1)
+  &:active
+    color greenyellow
+    text-shadow 0 0 4px
+</style>

@@ -21,7 +21,7 @@ const { icon } = Astro.props
   font-style italic
   font-weight lighter
   font-size .75em
-  color silver
+  color greenyellow
   transition color .2s
   user-select none
   > svg:first-child
@@ -30,9 +30,9 @@ const { icon } = Astro.props
     filter drop-shadow(0 0 4px black)
     transition filter .2s, translate .2s
   &:hover
-    color white
+    color yellow
     > svg:first-child
-      filter drop-shadow(0 0 4px teal)
+      filter drop-shadow(0 0 4px greenyellow)
       translate 0 -.25rem
   &:active
     > svg:first-child
