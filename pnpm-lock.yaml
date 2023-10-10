@@ -61,7 +61,7 @@ packages:
   /@astrojs/markdown-remark@3.2.1(astro@3.2.3):
     resolution: {integrity: sha512-Z4YNMRtgFZeHhB29uCZl0B9MbMZddW9ZKCNucapoysbvygbDFF1gGtqpVnf+Lyv3rUBHwM/J5qWB2MSZuTuz1g==}
     peerDependencies:
-      astro: ^3.2.3
+      astro: 3.2.3
     dependencies:
       '@astrojs/prism': 3.0.0
       astro: 3.2.3(stylus@0.60.0)
@@ -199,7 +199,7 @@ packages:
     resolution: {integrity: sha512-WhDWw1tdrlT0gMgUJSlX0IQvoO1eN279zrAUbVB+KpV2c3Tylz8+GnKOLllCS6Z/iZQEyVYxhZVUdPTqs2YYPw==}
     engines: {node: '>=6.9.0'}
     peerDependencies:
-      '@babel/core': ^7.0.0
+      '@babel/core': 7.0.0
     dependencies:
       '@babel/core': 7.23.0
       '@babel/helper-environment-visitor': 7.22.20
@@ -275,7 +275,7 @@ packages:
     resolution: {integrity: sha512-gvyP4hZrgrs/wWMaocvxZ44Hw0b3W8Pe+cMxc8V1ULQ07oh8VNbIRaoD1LRZVTvD+0nieDKjfgKg89sD7rrKrg==}
     engines: {node: '>=6.9.0'}
     peerDependencies:
-      '@babel/core': ^7.0.0-0
+      '@babel/core': 7.0.0-0
     dependencies:
       '@babel/core': 7.23.0
       '@babel/helper-plugin-utils': 7.22.5
@@ -285,7 +285,7 @@ packages:
     resolution: {integrity: sha512-oKckg2eZFa8771O/5vi7XeTvmM6+O9cxZu+kanTU7tD4sin5nO/G8jGJhq8Hvt2Z0kUoEDRayuZLaUlYl8QuGA==}
     engines: {node: '>=6.9.0'}
     peerDependencies:
-      '@babel/core': ^7.0.0-0
+      '@babel/core': 7.0.0-0
     dependencies:
       '@babel/core': 7.23.0
       '@babel/helper-annotate-as-pure': 7.22.5
