@@ -5,7 +5,7 @@ import { linkedin, email } from "@/data/sameAs"
 
 <section id="contacto">
     <h1 class="seccion-encabezado">Contacto</h1>
-    <p id="texto-contacto">Puedes ponerte en contacto conmigo en <u>cualquier momento</u>; Estoy interesado en nuevas oportunidades. Si tienes alguna duda no dudes en preguntarme</p>
+    <p id="texto-contacto">Puedes ponerte en contacto conmigo en <u>cualquier momento</u>;<br>Estoy interesado en nuevas oportunidades. Si tienes alguna duda no dudes en preguntarme</p>
     <ul id="lista-contactos">
         {[linkedin, email].map(({ href, title, icon }) => (
         <li><a href={href} target="_blank" rel="noreferrer noopener"><Icon name={icon} />{title}</a></li>
@@ -29,6 +29,7 @@ import { linkedin, email } from "@/data/sameAs"
       font-size clamp(1em, 1.5vw, 1.2em)
       line-height 1.5
       text-align center
+      font-weight bold
       color gainsboro
       u
         text-decoration-color greenyellow
