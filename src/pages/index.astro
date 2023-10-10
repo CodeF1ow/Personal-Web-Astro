@@ -1,14 +1,14 @@
 ---
-import "@fontsource/jura";
-import * as sameAs from "@/data/sameAs";
-import NavBar from "@/components/NavBar.astro";
-import Inicio from "@/layouts/Inicio.astro";
+import "@fontsource/jura"
+import * as sameAs from "@/data/sameAs"
+import NavBar from "@/components/NavBar.astro"
+import Inicio from "@/layouts/Inicio.astro"
 import SobreMi from "@/layouts/SobreMi.astro";
-import Proyectos from "@/layouts/Proyectos.astro";
-import Contacto from "@/layouts/Contacto.astro";
-import PiePagina from "@/layouts/PiePagina.astro";
+import Proyectos from "@/layouts/Proyectos.astro"
+import Contacto from "@/layouts/Contacto.astro"
+import PiePagina from "@/layouts/PiePagina.astro"
 
-import type { Person, WithContext } from "schema-dts";
+import type { Person, WithContext } from "schema-dts"
 
 const metaData = {
   title: "Portfolio",
@@ -35,6 +35,12 @@ const jsonLd: WithContext<Person> = {
   image: "https://avatars.githubusercontent.com/u/59541034",
   sameAs: Object.values(profiles).map(({ href }) => href),
 };
+
+if (Astro.site) {
+  jsonLd["@id"] = `${Astro.site}#identity`;
+  jsonLd.url = Astro.site.toString();
+  jsonLd.mainEntityOfPage = `${jsonLd.url.replace(/\/$/, "")}${resume.href}`;
+}
 ---
 
 <html lang="es">
