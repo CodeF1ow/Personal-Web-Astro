@@ -1,0 +1,69 @@
+---
+import { Icon } from "astro-iconify"
+import { linkedin, email } from "@/data/sameAs"
+---
+
+<section id="contacto">
+    <h1 class="seccion-encabezado">Contacto</h1>
+    <p id="texto-contacto">Puedes ponerte en contacto conmigo en <u>cualquier momento</u>; Estoy interesado en nuevas oportunidades. Si tienes alguna duda no dudes en preguntarme</p>
+    <ul id="lista-contactos">
+        {[linkedin, email].map(({ href, title, icon }) => (
+        <li><a href={href} target="_blank" rel="noreferrer noopener"><Icon name={icon} />{title}</a></li>
+      ))}
+    </ul>
+</section>
+
+<style lang="stylus">
+    #contacto
+      background rgb(0, 0, 0)
+      color greenyellow
+      $px = 1em
+      padding 1.5em $px 5em $px
+    
+    .seccion-encabezado
+      font-size clamp(2.5em, 12vw, 3em)
+      text-align center
+      margin 0
+    
+    #texto-contacto
+      font-size clamp(1em, 1.5vw, 1.2em)
+      line-height 1.5
+      text-align center
+      color gainsboro
+      u
+        text-decoration-color greenyellow
+    
+    #lista-contactos
+      list-style none
+      justify-content center
+      max-width max-content
+      padding-left 0
+      border-radius 8px
+      box-shadow 0 0 4px greenyellow
+      overflow hidden
+      margin auto
+      > li > a:first-child
+        text-decoration none
+        display inline-block
+        color greenyellow
+        background rgb(0, 0, 0)
+        width 100%
+        font-weight bold
+        box-sizing border-box
+        padding .5em .75em
+        transition color .15s, background .15s
+        > svg:first-child
+          color greenyellow
+          width 3em
+          vertical-align middle
+          margin-right .5em
+          transition color .15s, filter .2s, transform .2s
+        &:hover, &:active
+          color black
+          background greenyellow
+          > svg:first-child
+            color black
+            transform translateY(-.25em)
+        &:active
+          background greenyellow !important
+    </style>
