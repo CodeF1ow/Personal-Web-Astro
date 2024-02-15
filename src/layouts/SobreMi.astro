@@ -17,15 +17,18 @@ import { resume } from "@/data/sameAs";
     <div id="sobre-mi">
       <h1 class="seccion-titulo"><a href="#sobre-mi">Acerca de mí</a></h1>
       <p>
-        Me llamo <strong>Oscar</strong>, también conocido en línea como <em
+        Me llamo <strong>Oscar</strong>, también conocido como <em
           ><strong>Kiri86</strong></em
-        >. Soy un <strong>desarrollador autodidacta apasionado</strong> al que le
-        encanta <strong>explorar</strong> y <strong>probar</strong> las últimas tecnologías.
+        >, Soy un apasionado y joven <strong>desarrollador autodidacta</strong> al
+        que le encanta
+        <strong>explorar</strong> y <strong>probar</strong> las <strong
+          >últimas tecnologías</strong
+        >.
       </p>
       <p>
         Tengo habilidades para desarrollar <strong>sitios web</strong>, realizar <strong
           >análisis de datos</strong
-        > y crear <strong>visualizaciones</strong> utilizando <em>Python</em>, <em
+        > y crear <strong>visualizaciones</strong> utilizando <em>Python</em> y <em
           >JavaScript</em
         > o <em>TypeScript</em>.
       </p>
@@ -34,100 +37,101 @@ import { resume } from "@/data/sameAs";
           >tecnología</strong
         > me llevó a aprender <em>JavaScript</em> como mi primer lenguaje de programación
         cuando tenía 23 años. Poco después, empecé a interesarme por otras tecnologías,
-        incluyendo la <strong>Inteligencia Artificial</strong>. Sigo aprendiendo
+        incluyendo la <strong>Inteligencia Artificial</strong>, Sigo aprendiendo
         día a día para mejorar mis habilidades.
       </p>
       <p>
         También tengo mucho interés en el <strong
-          >desarrollo de aplicaciones</strong
-        > y las <strong>comunicaciones</strong>. He dominado tecnologías del <em
+          >desarrollo de apliaciones</strong
+        > y las <strong>comunicaciones</strong>, He dominado tecnologías del <em
           >lado del cliente</em
         > y <em>lado del servidor</em>, lo que me ha permitido crear <u
           >proyectos emocionantes</u
         >.
       </p>
     </div>
-    <fieldset id="intereses">
-      <legend>Intereses</legend>
-      <ul>
-        {
-          [
-            { icon: "mdi:code-braces", text: "Tecnologias" },
-            { icon: "mdi:robot-angry", text: "Discord Bots" },
-            { icon: "simple-icons:windows95", text: "Linux" },
-            {
-              icon: "solar:gamepad-minimalistic-bold-duotone",
-              text: "Videojuegos y Modding",
-            },
-          ].map(({ icon, text }) => (
-            <li>
-              <Icon name={icon} />
-              {text}
-            </li>
-          ))
-        }
-      </ul>
-    </fieldset>
-    <a href={resume.href} target="_blank" id="enlace-curriculum"
-      ><Icon name={resume.icon} />{resume.title}<Icon
-        name="iconamoon:link-external-duotone"
-      /></a
-    >
-
-    <div id="habilidades">
-      <h1 class="seccion-titulo">
-        <a href="#habilidades"
-          ><Icon name="carbon:skill-level-advanced" />Mis habilidades en
-          programación</a
-        >
-      </h1>
-      <fieldset id="front-end">
-        <legend
-          ><a href="#front-end"><Icon name="eva:browser-fill" />Front-End</a
-          ></legend
-        >
-        <fieldset>
-          <legend>Diseño</legend>
-          <Skill icon="vscode-icons:file-type-css">CSS</Skill>
-          <Skill icon="stylus">Stylus</Skill>
-          <Skill icon="logos:tailwindcss-icon">Tailwind CSS</Skill>
-        </fieldset>
-        <fieldset>
-          <legend>Programacion</legend>
-          <Skill icon="skill-icons:javascript">JavaScript</Skill>
-          <Skill icon="skill-icons:typescript">TypeScript</Skill>
-          <fieldset>
-            <legend>Frameworks / Librerias</legend>
-            <Skill icon="logos:react">React</Skill>
-            <Skill icon="logos:vue">Vue</Skill>
-          </fieldset>
-        </fieldset>
-      </fieldset>
-
-      <fieldset id="back-end">
-        <legend
-          ><a href="#back-end"
-            ><Icon name="clarity:rack-server-solid" />Back-End</a
-          ></legend
-        >
-        <Skill icon="logos:nodejs-icon-alt">Node.js</Skill>
-        <Skill icon="simple-icons:express">Express</Skill>
-        <fieldset>
-          <legend><Icon name="ph:database-duotone" />Base de datos</legend>
-          <Skill icon="devicon:mongodb">MongoDB</Skill>
-          <Skill icon="logos:postgresql">PostgreSQL</Skill>
-        </fieldset>
-      </fieldset>
-
-      <fieldset id="todo-en-uno">
-        <legend><a href="#todo-en-uno">Frameworks todo en uno</a></legend>
-        <Skill icon="logos:nextjs-icon">Next.js</Skill>
-        <Skill icon="skill-icons:astro">Astro</Skill>
-      </fieldset>
-    </div>
   </div>
+  <fieldset id="intereses">
+    <legend>Intereses</legend>
+    <ul>
+      {
+        [
+          { icon: "mdi:code-braces", text: "Tecnologias" },
+          { icon: "mdi:robot-angry", text: "Discord Bots" },
+          { icon: "simple-icons:windows95", text: "Linux" },
+          {
+            icon: "solar:gamepad-minimalistic-bold-duotone",
+            text: "Videojuegos y Modding",
+          },
+        ].map(({ icon, text }) => (
+          <li>
+            <Icon name={icon} />
+            {text}
+          </li>
+        ))
+      }
+    </ul>
+  </fieldset>
+  <a href={resume.href} target="_blank" id="enlace-curriculum"
+    ><Icon name={resume.icon} />{resume.title}<Icon
+      name="iconamoon:link-external-duotone"
+    /></a
+  >
 
-  <style lang="stylus">
+  <div id="habilidades">
+    <h1 class="seccion-titulo">
+      <a href="#habilidades"
+        ><Icon name="carbon:skill-level-advanced" />Mis habilidades en
+        programación</a
+      >
+    </h1>
+    <fieldset id="front-end">
+      <legend
+        ><a href="#front-end"><Icon name="eva:browser-fill" />Front-End</a
+        ></legend
+      >
+      <fieldset>
+        <legend>Diseño</legend>
+        <Skill icon="vscode-icons:file-type-css">CSS</Skill>
+        <Skill icon="stylus">Stylus</Skill>
+        <Skill icon="logos:tailwindcss-icon">Tailwind CSS</Skill>
+      </fieldset>
+      <fieldset>
+        <legend>Programacion</legend>
+        <Skill icon="skill-icons:javascript">JavaScript</Skill>
+        <Skill icon="skill-icons:typescript">TypeScript</Skill>
+        <fieldset>
+          <legend>Frameworks / Librerias</legend>
+          <Skill icon="logos:react">React</Skill>
+          <Skill icon="logos:vue">Vue</Skill>
+        </fieldset>
+      </fieldset>
+    </fieldset>
+
+    <fieldset id="back-end">
+      <legend
+        ><a href="#back-end"
+          ><Icon name="clarity:rack-server-solid" />Back-End</a
+        ></legend
+      >
+      <Skill icon="logos:nodejs-icon-alt">Node.js</Skill>
+      <Skill icon="simple-icons:express">Express</Skill>
+      <fieldset>
+        <legend><Icon name="ph:database-duotone" />Base de datos</legend>
+        <Skill icon="devicon:mongodb">MongoDB</Skill>
+        <Skill icon="logos:postgresql">PostgreSQL</Skill>
+      </fieldset>
+    </fieldset>
+
+    <fieldset id="todo-en-uno">
+      <legend><a href="#todo-en-uno">Frameworks todo en uno</a></legend>
+      <Skill icon="logos:nextjs-icon">Next.js</Skill>
+      <Skill icon="skill-icons:astro">Astro</Skill>
+    </fieldset>
+  </div>
+</section>
+
+<style lang="stylus">
   .seccion-titulo
     font-size clamp(1.4em, 8vw, 2em)
     > a:first-child
@@ -359,4 +363,3 @@ import { resume } from "@/data/sameAs";
     #intereses > ul
       flex-direction column
   </style>
-</section>
