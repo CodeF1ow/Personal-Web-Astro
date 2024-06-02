@@ -1,54 +1,37 @@
-# Astro Starter Kit: Basics
+# Portafolio | CodeFlow
 
-```sh
-npm create astro@latest -- --template basics
-```
+**Portfolio construido con Astro y Tailwind, con una interfaz moderna.**
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## Vista Previa
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+![Vista Previa](https://cdn.discordapp.com/attachments/415909552014360577/1246833130065891358/image.png?ex=665dd357&is=665c81d7&hm=7c8d4e83a8936980276a2c522660c3c5a56fcdf76d2d67eadc954f0221063e14&)
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## Demo
 
-## 🚀 Project Structure
+- [Demo](https://oscar-web-astro.vercel.app/)
 
-Inside of your Astro project, you'll see the following folders and files:
+## Despliegue de la Aplicación
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+**Ejecutando la Aplicación**
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+1. Clona el repositorio: `git clone https://github.com/CodeF1ow/flow-port-astro.git`
+2. Instala las dependencias: `pnpm install`
+3. Inicia la aplicación: `pnpm run dev`
+4. Abre el navegador y ve a [http://localhost:4321](http://localhost:4321)
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Requisitos Previos
 
-Any static assets, like images, can be placed in the `public/` directory.
+- Node.js >= versión 12
+- npm o pnpm
 
-## 🧞 Commands
+## Información de Contacto
 
-All commands are run from the root of the project, from a terminal:
+Para cualquier duda o consulta, no dudes en ponerte en contacto con nosotros a través de [correo electrónico](mailto:correo@codef1ow.dev) o [Twitter](https://twitter.com/codef1ow).
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## Licencia
 
-## 👀 Want to learn more?
+Este proyecto está bajo la [Licencia MIT](LICENSE).
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## Autor
+
+- [@CodeF1ow](https://github.com/CodeF1ow)
