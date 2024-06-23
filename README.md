@@ -4,7 +4,7 @@
 
 ## Vista Previa
 
-![Vista Previa](https://cdn.discordapp.com/attachments/415909552014360577/1246833130065891358/image.png?ex=665dd357&is=665c81d7&hm=7c8d4e83a8936980276a2c522660c3c5a56fcdf76d2d67eadc954f0221063e14&)
+![Vista Previa](https://i.ibb.co/PrVgdyt/image.png)
 
 ## Demo
 
